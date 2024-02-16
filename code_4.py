@@ -66,7 +66,7 @@ def get_the_most_expensive_big_mac_price_by_year(year):
     name = link['name'].iloc[0]
     country_name = link['iso_a3'].iloc[0].upper() 
 
-    return f"{name}({country_name}): ${price_d:.2f}" 
+    return f"{name}({country_name}): ${price_d:.1f}" 
 
 if __name__ == "__main__":
     result_a = get_big_mac_price_by_year(2009,"mex")
@@ -78,5 +78,5 @@ if __name__ == "__main__":
     result_c = get_the_cheapest_big_mac_price_by_year(2008)
     print(result_c)
     
-    result_d = get_the_most_expensive_big_mac_price_by_year(2013)
+    result_d = get_the_most_expensive_big_mac_price_by_year(2003)
     print(result_d)
